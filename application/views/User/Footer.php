@@ -47,7 +47,7 @@
 <script>
   document.querySelectorAll('.checkout-btn').forEach(button => {
     button.addEventListener('click', function () {
-   
+      
       document.getElementById('modalProduk').textContent = this.dataset.produk;
       document.getElementById('modalHarga').textContent = this.dataset.harga;
       document.getElementById('modalStok').textContent = this.dataset.stok;

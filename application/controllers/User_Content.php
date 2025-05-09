@@ -18,11 +18,21 @@ class User_Content extends CI_Controller {
     }
     public function Transaksi()
     {
-      if ($this->Transaksi_model->Transaksi()) {
-        redirect(base_url(''));
+      $id = $this->Transaksi_model->Transaksi();
+      if ($id) {
+        redirect(site_url('User_Content/Laporan/' . $id));
       } else {
         redirect(site_url("Dashboar_adm/Tambah_produk"));
       }
     }
+
+    public function Laporan($id)
+    {
+      $data['laporan'] = $this->Transaksi_model->getTransaksiByID($id);
+      $this->load->view('User/Navbar');
+      $this->load->view('User/Transaksi',$data);
+      $this->load->view('User/Footer');
+    }
+
 }
 ?>

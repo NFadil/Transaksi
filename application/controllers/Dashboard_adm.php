@@ -55,8 +55,19 @@ class Dashboard_adm extends CI_Controller {
 		}
 
 	}
+	public function Detail($id)
+    {
+      $data['laporan'] = $this->Transaksi_model->getTransaksiByID($id);
+      $this->load->view('Admin/Navbar');
+      $this->load->view('Admin/Detail',$data);
+      $this->load->view('Admin/Footer');
+    }
 	public function deleteProduk($id) {
 		$this->Produk_model->deleteProduk($id);
 		redirect(base_url(''));
+	}
+	public function deleteTransaksi($id) {
+		$this->Transaksi_model->deleteTransaksi($id);
+		redirect(site_url('Dashboard_adm/Transaksi'));
 	}
 }

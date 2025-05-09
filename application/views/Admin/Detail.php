@@ -20,31 +20,27 @@
                     <div class="box">
                         <div class="box-body">
                             <div class="table-responsive">
-                            <?php echo $this->session->userdata("success"); ?>
                                 <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>ID </th>
                                             <th>Kode Transaksi</th>
+                                            <th>Nama Produk</th>
+                                            <th>Quantity</th>
+                                            <th>Total Harga</th>
                                             <th>Tanggal</th>
-                                            <th>Aksi</th>
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php
-                                            foreach ($transaksi->result() as $row) {
-                                                echo "<tr>";
-                                                echo "<td>" . $row->id . "</td>";
-                                                echo "<td>" . $row->kode_transaksi . "</td>";
-                                                echo "<td>" . $row->tanggal . "</td>";
-                                                echo "<td>
-                                                        <a href='" . site_url('Dashboard_adm/detail/' . $row->id) . "' class='btn btn-sm btn-primary'><i class='fas fa-eye'></i></a>
-                                                        <a href='" . site_url('Dashboard_adm/deleteTransaksi/' . $row->id_transaksi) . "' class='btn btn-sm btn-danger' onclick='return confirm(\"Yakin ingin menghapus?\")'><i class='fas fa-trash'></i></a>
-                                                    </td>";
-                                                echo "</tr>";
-                                            }
-                                        ?>
+                                        <tr>
+                                            <td><?php echo $laporan->id;?></td>
+                                            <td><?php echo $laporan->kode_transaksi;?></td>
+                                            <td><?php echo $laporan->produk;?></td>
+                                            <td><?php echo $laporan->quantity;?></td>
+                                            <td>Rp.<?php echo number_format($laporan->harga * $laporan->quantity);?></td>
+                                            <td><?php echo $laporan->tanggal;?></td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
