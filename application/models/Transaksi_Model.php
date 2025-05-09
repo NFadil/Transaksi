@@ -63,6 +63,22 @@ class Transaksi_model extends CI_Model {
 		);
 		$this->db->insert("detail_transaksi", $data2);
 		$id = $this->db->insert_id();
+
+		$this->db->where('id', $id_produk);
+		$produk = $this->db->get('produk')->row();
+
+		if ($produk) {
+			$stok_sekarang = $produk->stok;
+			$stok_baru = $stok_sekarang - $jumlah;
+
+			if ($stok_baru < 0) {
+				$this->session->set_flashdata("error", "<div class='alert alert-danger' role='alert'>Stok tidak cukup!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
+				return false;
+			}
+
+			$this->db->where('id', $id_produk);
+			$this->db->update('produk', array('stok' => $stok_baru));
+		}
 		$this->session->set_flashdata("success", "<div class='alert alert-success' role='alert'>Berhasil Transaksi !<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>");
 
 		return $id; 

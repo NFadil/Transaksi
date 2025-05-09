@@ -18,6 +18,7 @@
             <h5 class="card-title"> <?=$row->produk?></h5>
             <p class="card-text">Sisa <?=$row->stok?></p>
             <p class="card-text"><?=number_format($row->harga, 0, ',', '.')?></p>
+            <?php if ($row->stok > 0) { ?>
             <a href="#" class="btn btn-primary checkout-btn" 
                 data-produk="<?=$row->produk?>" 
                 data-harga="<?=number_format($row->harga, 0, ',', '.')?>" 
@@ -25,6 +26,9 @@
                 data-stok="<?=$row->stok?>"
                 data-bs-toggle="modal" 
                 data-bs-target="#checkoutModal">Beli Produk</a>
+                <?php }else {?>
+                  <p class="card-text text-danger">Barang Tidak tersedia</p>
+                 <?php }?>
           </div>
         </div>
       </div>

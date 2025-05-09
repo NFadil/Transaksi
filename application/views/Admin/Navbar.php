@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url('asset/') ?>css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="icon" href="<?php echo base_url('asset/img/ai.png'); ?>" type="image/x-icon">
 
 </head>
 
@@ -47,7 +48,7 @@
             <!-- Nav Item - Produk -->
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo base_url('')?>">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-folder"></i>
                     <span>Produk</span></a>
             </li>
              <!-- Nav Item - Transaksi -->
@@ -55,6 +56,11 @@
                 <a class="nav-link" href="<?php echo site_url('Dashboard_adm/Transaksi')?>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Transaksi</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url('User_Content')?>">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>User Content</span></a>
             </li>
 
         </ul>

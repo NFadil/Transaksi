@@ -8,6 +8,7 @@
   <link href="<?php echo base_url('asset/') ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="<?php echo base_url('asset/') ?>css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="icon" href="<?php echo base_url('asset/img/ai.png'); ?>" type="image/x-icon">
   <style>
     .no-results {
       display: none;
@@ -32,7 +33,7 @@
             <a class="nav-link active" href="<?= site_url('User_content');?>">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="<?= base_url();?>">Login Admin</a>
+            <a class="nav-link active" href="<?= base_url();?>">Room Admin</a>
           </li>
         </ul>
       </div>
