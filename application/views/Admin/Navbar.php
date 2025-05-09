@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin Dashboard</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="<?php echo base_url('asset/') ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="<?php echo base_url('asset/') ?>css/sb-admin-2.min.css" rel="stylesheet">
+
 </head>
-<body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-  <a class="navbar-brand" href="#">Admin Dashboard</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<body id="page-top">
 
-  <div class="collapse navbar-collapse" id="navbarAdmin">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pengguna</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Laporan</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pengaturan</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ms-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-          Admin
-        </a>
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><a class="dropdown-item" href="#">Profil</a></li>
-          <li><a class="dropdown-item" href="#">Keluar</a></li>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url('')?>">
+                <div class="sidebar-brand-text mx-3">Sistem Transaksi</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Menu
+            </div>
+            <!-- Nav Item - Produk -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?php echo base_url('')?>">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Produk</span></a>
+            </li>
+             <!-- Nav Item - Transaksi -->
+             <li class="nav-item">
+                <a class="nav-link" href="<?php echo site_url('Dashboard_adm/Transaksi')?>">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Transaksi</span></a>
+            </li>
+
         </ul>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+        <!-- End of Sidebar -->
